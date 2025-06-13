@@ -1,0 +1,113 @@
+Ligne à intégrer dans mon Cmakelist : find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED) 
+
+
+🎯 Mes objectifs et mon avancement du mardi 3 juin 2025
+
+✅ 1. Boucle de jeu (update() / draw())
+Création classe Game avec :
+
+update() → mise à jour logique du jeu
+
+draw() → affichage de tous les éléments
+
+Intégrée proprement dans main.cpp
+
+🔹 ✅ Objectif atteint
+
+✅ 2. Gestion de l’or, score, vies
+Création classe Player avec :
+
+Vies (health)
+
+Or (gold)
+
+Score (score)
+
+Méthodes fonctionnelles : addGold(), takeDamage(), getScore()...
+
+🔹 ✅ Objectif atteint
+
+✅ 3. Affichage du HUD (interface)
+Création classe UI avec :
+
+Chargement d’une police
+
+Affichage de l’or, des vies, du score
+
+Méthodes update() et draw()
+
+Prête pour être étendue (ex: boutons, menus…)
+
+🔹 ✅ Objectif atteint
+
+
+
+
+
+
+
+
+
+
+📝 Ce qu’il reste à faire une fois en intégration avec l’équipe :
+
+Relier les vraies actions du jeu (ex: tuer un ennemi → gagner de l’or)
+
+Afficher des éléments dynamiques (comme des boutons ou des popups)
+
+Gérer fin de partie ou pause (facultatif mais utile)
+
+prompte à faire : montre moi comment afficher un bouton "Start Wave" dans UI 
+                 (ajouter un bouton interactif SFML (ex: “Start Wave”) dans l’interface !)
+
+
+
+
+
+
+
+Créer un map ou utilser une déjà faite ? De manière stratégique en fonction de :
+
+🔧 votre deadline (2 semaines)
+
+👥 votre travail en équipe
+
+🎨 la qualité et disponibilité des assets
+
+⏳ le temps que tu peux investir
+
+🧠 Voici ta meilleure option dans le cadre de ce projet de groupe :
+✅ ➡️ Utiliser la carte déjà présente dans le GitHub Kingdom-Rush
+📌 Pourquoi ?
+
+Elle est déjà prête, en .png, bien dimensionnée.
+
+Elle s'intègre parfaitement à SFML.
+
+Tu peux rapidement créer un Map::draw() sans devoir générer une carte tuile par tuile.
+
+Ça te permet de te concentrer sur ton cœur de mission (boucle de jeu, HUD, score, etc.).
+
+💡 Et ensuite ? (si tu veux aller plus loin…)
+🟨 Si tu as du temps supplémentaire ou si l’équipe veut aller plus loin à la fin :
+
+Tu pourras remplacer ou améliorer cette carte avec une map personnalisée.
+
+Tu pourras intégrer ton projet "type Pokémon" basé sur une grille (tileset).
+
+Dans ce cas :
+
+Daria peut t’aider à transformer les assets en tuiles exploitables.
+
+Nelson peut adapter le pathfinding (ennemis suivant un chemin défini dans la grille).
+
+
+
+✅ Ma recommandation finale :
+
+Option	Recommandée pour ce projet ?	Pourquoi
+🔄 Réutiliser level1-map.png	✅ Oui	Rapide, intégré, facile à afficher
+
+🧱 Coder une map personnalisée (tiles)	❌ Pas maintenant	Trop long à faire dans les 2 semaines
+
+

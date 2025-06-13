@@ -1,0 +1,31 @@
+# macOS
+.DS_Store
+
+# C++
+*.o
+*.out
+*.exe
+
+# VSCode
+.vscode/
+
+# Unity
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+Packages/
+ProjectSettings/
+UserSettings/
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
