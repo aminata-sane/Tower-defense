@@ -143,6 +143,8 @@ private:
 
     sf::SoundBuffer soundBuffer; // Sound for shooting
     sf::Sound shootSound;        // Sound object
+    sf::SoundBuffer upgradeBuffer;
+    sf::Sound upgradeSound;
 
     std::shared_ptr<Enemy> target; // Currently acquired target
 
