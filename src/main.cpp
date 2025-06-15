@@ -14,8 +14,8 @@ int main() {
     if (!map.loadFromFile(mapFile))
         return -1;
 
-    WaveManager wave(map);
-    wave.setMaxEnemiesAllowed(10);
+    WaveManager* wave = new WaveManager(map);
+    wave->setMaxEnemiesAllowed(10);
 
     sf::RenderWindow window(sf::VideoMode(960, 768), "Tower Defense");
     window.setFramerateLimit(60);
@@ -37,27 +37,40 @@ int main() {
         }
 
         if (state == GameState::Map1 || state == GameState::Map2) {
-            wave.update(dt.asSeconds());
+            wave->update(dt.asSeconds());
 
-            if (wave.hasLost()) {
+            if (wave->hasLost()) {
                 state = GameState::Defeat;
                 text.setString("You Lost!");
                 text.setFillColor(sf::Color::Red);
-            } else if (wave.hasWon()) {
+            } else if (wave->hasWon()) {
                 if (state == GameState::Map1) {
+                    delete wave;
+
                     state = GameState::Map2;
                     mapFile = "assets/maps2.txt";
                     map.loadFromFile(mapFile);
-                    wave = WaveManager(map);
-                    wave.setMaxEnemiesAllowed(5);
+
+                    wave = new WaveManager(map);
+                    wave->setMaxEnemiesAllowed(5);
                 } else {
                     state = GameState::Victory;
                     text.setString("Victory!");
                     text.setFillColor(sf::Color::Green);
+                    delete wave;
+                    wave = nullptr;
                 }
             }
         }
 
         window.clear();
         map.draw(window);
-        wave.draw(window);
+        if (wave) wave->draw(window);
+        if (state == GameState::Defeat || state == GameState::Victory)
+            window.draw(text);
+        window.display();
+    }
+
+    delete wave;
+    return 0;
+}

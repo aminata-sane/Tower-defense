@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake.exe
+CMAKE_COMMAND = C:/msys64/ucrt64/bin/cmake.exe
 
 # The command to remove a file.
-RM = /usr/bin/cmake.exe -E rm -f
+RM = C:/msys64/ucrt64/bin/cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /c/Users/ndesc/OneDrive/Bureau/KingdomDefense
+CMAKE_SOURCE_DIR = C:/Users/ndesc/OneDrive/Bureau/KingdomDefense
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/build
+CMAKE_BINARY_DIR = C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/KingdomDefense.dir/depend.make
@@ -72,83 +72,90 @@ include CMakeFiles/KingdomDefense.dir/flags.make
 CMakeFiles/KingdomDefense.dir/codegen:
 .PHONY : CMakeFiles/KingdomDefense.dir/codegen
 
-CMakeFiles/KingdomDefense.dir/src/enemy.cpp.o: CMakeFiles/KingdomDefense.dir/flags.make
-CMakeFiles/KingdomDefense.dir/src/enemy.cpp.o: /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/enemy.cpp
-CMakeFiles/KingdomDefense.dir/src/enemy.cpp.o: CMakeFiles/KingdomDefense.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/c/Users/ndesc/OneDrive/Bureau/KingdomDefense/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/KingdomDefense.dir/src/enemy.cpp.o"
-	/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/KingdomDefense.dir/src/enemy.cpp.o -MF CMakeFiles/KingdomDefense.dir/src/enemy.cpp.o.d -o CMakeFiles/KingdomDefense.dir/src/enemy.cpp.o -c /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/enemy.cpp
+CMakeFiles/KingdomDefense.dir/src/enemy.cpp.obj: CMakeFiles/KingdomDefense.dir/flags.make
+CMakeFiles/KingdomDefense.dir/src/enemy.cpp.obj: CMakeFiles/KingdomDefense.dir/includes_CXX.rsp
+CMakeFiles/KingdomDefense.dir/src/enemy.cpp.obj: C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/enemy.cpp
+CMakeFiles/KingdomDefense.dir/src/enemy.cpp.obj: CMakeFiles/KingdomDefense.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/KingdomDefense.dir/src/enemy.cpp.obj"
+	C:/msys64/ucrt64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/KingdomDefense.dir/src/enemy.cpp.obj -MF CMakeFiles/KingdomDefense.dir/src/enemy.cpp.obj.d -o CMakeFiles/KingdomDefense.dir/src/enemy.cpp.obj -c C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/enemy.cpp
 
 CMakeFiles/KingdomDefense.dir/src/enemy.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/KingdomDefense.dir/src/enemy.cpp.i"
-	/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/enemy.cpp > CMakeFiles/KingdomDefense.dir/src/enemy.cpp.i
+	C:/msys64/ucrt64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/enemy.cpp > CMakeFiles/KingdomDefense.dir/src/enemy.cpp.i
 
 CMakeFiles/KingdomDefense.dir/src/enemy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/KingdomDefense.dir/src/enemy.cpp.s"
-	/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/enemy.cpp -o CMakeFiles/KingdomDefense.dir/src/enemy.cpp.s
+	C:/msys64/ucrt64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/enemy.cpp -o CMakeFiles/KingdomDefense.dir/src/enemy.cpp.s
 
-CMakeFiles/KingdomDefense.dir/src/main.cpp.o: CMakeFiles/KingdomDefense.dir/flags.make
-CMakeFiles/KingdomDefense.dir/src/main.cpp.o: /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/main.cpp
-CMakeFiles/KingdomDefense.dir/src/main.cpp.o: CMakeFiles/KingdomDefense.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/c/Users/ndesc/OneDrive/Bureau/KingdomDefense/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/KingdomDefense.dir/src/main.cpp.o"
-	/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/KingdomDefense.dir/src/main.cpp.o -MF CMakeFiles/KingdomDefense.dir/src/main.cpp.o.d -o CMakeFiles/KingdomDefense.dir/src/main.cpp.o -c /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/main.cpp
+CMakeFiles/KingdomDefense.dir/src/main.cpp.obj: CMakeFiles/KingdomDefense.dir/flags.make
+CMakeFiles/KingdomDefense.dir/src/main.cpp.obj: CMakeFiles/KingdomDefense.dir/includes_CXX.rsp
+CMakeFiles/KingdomDefense.dir/src/main.cpp.obj: C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/main.cpp
+CMakeFiles/KingdomDefense.dir/src/main.cpp.obj: CMakeFiles/KingdomDefense.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/KingdomDefense.dir/src/main.cpp.obj"
+	C:/msys64/ucrt64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/KingdomDefense.dir/src/main.cpp.obj -MF CMakeFiles/KingdomDefense.dir/src/main.cpp.obj.d -o CMakeFiles/KingdomDefense.dir/src/main.cpp.obj -c C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/main.cpp
 
 CMakeFiles/KingdomDefense.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/KingdomDefense.dir/src/main.cpp.i"
-	/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/main.cpp > CMakeFiles/KingdomDefense.dir/src/main.cpp.i
+	C:/msys64/ucrt64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/main.cpp > CMakeFiles/KingdomDefense.dir/src/main.cpp.i
 
 CMakeFiles/KingdomDefense.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/KingdomDefense.dir/src/main.cpp.s"
-	/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/main.cpp -o CMakeFiles/KingdomDefense.dir/src/main.cpp.s
+	C:/msys64/ucrt64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/main.cpp -o CMakeFiles/KingdomDefense.dir/src/main.cpp.s
 
-CMakeFiles/KingdomDefense.dir/src/map.cpp.o: CMakeFiles/KingdomDefense.dir/flags.make
-CMakeFiles/KingdomDefense.dir/src/map.cpp.o: /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/map.cpp
-CMakeFiles/KingdomDefense.dir/src/map.cpp.o: CMakeFiles/KingdomDefense.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/c/Users/ndesc/OneDrive/Bureau/KingdomDefense/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/KingdomDefense.dir/src/map.cpp.o"
-	/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/KingdomDefense.dir/src/map.cpp.o -MF CMakeFiles/KingdomDefense.dir/src/map.cpp.o.d -o CMakeFiles/KingdomDefense.dir/src/map.cpp.o -c /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/map.cpp
+CMakeFiles/KingdomDefense.dir/src/map.cpp.obj: CMakeFiles/KingdomDefense.dir/flags.make
+CMakeFiles/KingdomDefense.dir/src/map.cpp.obj: CMakeFiles/KingdomDefense.dir/includes_CXX.rsp
+CMakeFiles/KingdomDefense.dir/src/map.cpp.obj: C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/map.cpp
+CMakeFiles/KingdomDefense.dir/src/map.cpp.obj: CMakeFiles/KingdomDefense.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/KingdomDefense.dir/src/map.cpp.obj"
+	C:/msys64/ucrt64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/KingdomDefense.dir/src/map.cpp.obj -MF CMakeFiles/KingdomDefense.dir/src/map.cpp.obj.d -o CMakeFiles/KingdomDefense.dir/src/map.cpp.obj -c C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/map.cpp
 
 CMakeFiles/KingdomDefense.dir/src/map.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/KingdomDefense.dir/src/map.cpp.i"
-	/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/map.cpp > CMakeFiles/KingdomDefense.dir/src/map.cpp.i
+	C:/msys64/ucrt64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/map.cpp > CMakeFiles/KingdomDefense.dir/src/map.cpp.i
 
 CMakeFiles/KingdomDefense.dir/src/map.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/KingdomDefense.dir/src/map.cpp.s"
-	/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/map.cpp -o CMakeFiles/KingdomDefense.dir/src/map.cpp.s
+	C:/msys64/ucrt64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/map.cpp -o CMakeFiles/KingdomDefense.dir/src/map.cpp.s
 
-CMakeFiles/KingdomDefense.dir/src/wave.cpp.o: CMakeFiles/KingdomDefense.dir/flags.make
-CMakeFiles/KingdomDefense.dir/src/wave.cpp.o: /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/wave.cpp
-CMakeFiles/KingdomDefense.dir/src/wave.cpp.o: CMakeFiles/KingdomDefense.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/c/Users/ndesc/OneDrive/Bureau/KingdomDefense/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/KingdomDefense.dir/src/wave.cpp.o"
-	/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/KingdomDefense.dir/src/wave.cpp.o -MF CMakeFiles/KingdomDefense.dir/src/wave.cpp.o.d -o CMakeFiles/KingdomDefense.dir/src/wave.cpp.o -c /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/wave.cpp
+CMakeFiles/KingdomDefense.dir/src/wave.cpp.obj: CMakeFiles/KingdomDefense.dir/flags.make
+CMakeFiles/KingdomDefense.dir/src/wave.cpp.obj: CMakeFiles/KingdomDefense.dir/includes_CXX.rsp
+CMakeFiles/KingdomDefense.dir/src/wave.cpp.obj: C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/wave.cpp
+CMakeFiles/KingdomDefense.dir/src/wave.cpp.obj: CMakeFiles/KingdomDefense.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/KingdomDefense.dir/src/wave.cpp.obj"
+	C:/msys64/ucrt64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/KingdomDefense.dir/src/wave.cpp.obj -MF CMakeFiles/KingdomDefense.dir/src/wave.cpp.obj.d -o CMakeFiles/KingdomDefense.dir/src/wave.cpp.obj -c C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/wave.cpp
 
 CMakeFiles/KingdomDefense.dir/src/wave.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/KingdomDefense.dir/src/wave.cpp.i"
-	/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/wave.cpp > CMakeFiles/KingdomDefense.dir/src/wave.cpp.i
+	C:/msys64/ucrt64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/wave.cpp > CMakeFiles/KingdomDefense.dir/src/wave.cpp.i
 
 CMakeFiles/KingdomDefense.dir/src/wave.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/KingdomDefense.dir/src/wave.cpp.s"
-	/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/wave.cpp -o CMakeFiles/KingdomDefense.dir/src/wave.cpp.s
+	C:/msys64/ucrt64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/src/wave.cpp -o CMakeFiles/KingdomDefense.dir/src/wave.cpp.s
 
 # Object files for target KingdomDefense
 KingdomDefense_OBJECTS = \
-"CMakeFiles/KingdomDefense.dir/src/enemy.cpp.o" \
-"CMakeFiles/KingdomDefense.dir/src/main.cpp.o" \
-"CMakeFiles/KingdomDefense.dir/src/map.cpp.o" \
-"CMakeFiles/KingdomDefense.dir/src/wave.cpp.o"
+"CMakeFiles/KingdomDefense.dir/src/enemy.cpp.obj" \
+"CMakeFiles/KingdomDefense.dir/src/main.cpp.obj" \
+"CMakeFiles/KingdomDefense.dir/src/map.cpp.obj" \
+"CMakeFiles/KingdomDefense.dir/src/wave.cpp.obj"
 
 # External object files for target KingdomDefense
 KingdomDefense_EXTERNAL_OBJECTS =
 
-KingdomDefense.exe: CMakeFiles/KingdomDefense.dir/src/enemy.cpp.o
-KingdomDefense.exe: CMakeFiles/KingdomDefense.dir/src/main.cpp.o
-KingdomDefense.exe: CMakeFiles/KingdomDefense.dir/src/map.cpp.o
-KingdomDefense.exe: CMakeFiles/KingdomDefense.dir/src/wave.cpp.o
+KingdomDefense.exe: CMakeFiles/KingdomDefense.dir/src/enemy.cpp.obj
+KingdomDefense.exe: CMakeFiles/KingdomDefense.dir/src/main.cpp.obj
+KingdomDefense.exe: CMakeFiles/KingdomDefense.dir/src/map.cpp.obj
+KingdomDefense.exe: CMakeFiles/KingdomDefense.dir/src/wave.cpp.obj
 KingdomDefense.exe: CMakeFiles/KingdomDefense.dir/build.make
-KingdomDefense.exe: /mingw64/lib/libsfml-graphics.dll.a
-KingdomDefense.exe: /mingw64/lib/libsfml-window.dll.a
-KingdomDefense.exe: /mingw64/lib/libsfml-system.dll.a
-KingdomDefense.exe: CMakeFiles/KingdomDefense.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/c/Users/ndesc/OneDrive/Bureau/KingdomDefense/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable KingdomDefense.exe"
-	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/KingdomDefense.dir/link.txt --verbose=$(VERBOSE)
+KingdomDefense.exe: C:/msys64/ucrt64/lib/libsfml-graphics.dll.a
+KingdomDefense.exe: C:/msys64/ucrt64/lib/libsfml-window.dll.a
+KingdomDefense.exe: C:/msys64/ucrt64/lib/libsfml-system.dll.a
+KingdomDefense.exe: CMakeFiles/KingdomDefense.dir/linkLibs.rsp
+KingdomDefense.exe: CMakeFiles/KingdomDefense.dir/objects1.rsp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable KingdomDefense.exe"
+	C:/msys64/ucrt64/bin/cmake.exe -E rm -f CMakeFiles/KingdomDefense.dir/objects.a
+	C:/msys64/ucrt64/bin/ar.exe qc CMakeFiles/KingdomDefense.dir/objects.a @CMakeFiles/KingdomDefense.dir/objects1.rsp
+	C:/msys64/ucrt64/bin/c++.exe -Wl,--whole-archive CMakeFiles/KingdomDefense.dir/objects.a -Wl,--no-whole-archive -o KingdomDefense.exe -Wl,--out-implib,libKingdomDefense.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/KingdomDefense.dir/linkLibs.rsp
 
 # Rule to build all files generated by this target.
 CMakeFiles/KingdomDefense.dir/build: KingdomDefense.exe
@@ -159,6 +166,6 @@ CMakeFiles/KingdomDefense.dir/clean:
 .PHONY : CMakeFiles/KingdomDefense.dir/clean
 
 CMakeFiles/KingdomDefense.dir/depend:
-	cd /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /c/Users/ndesc/OneDrive/Bureau/KingdomDefense /c/Users/ndesc/OneDrive/Bureau/KingdomDefense /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/build /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/build /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/build/CMakeFiles/KingdomDefense.dir/DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" C:/Users/ndesc/OneDrive/Bureau/KingdomDefense C:/Users/ndesc/OneDrive/Bureau/KingdomDefense C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/build C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/build C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/build/CMakeFiles/KingdomDefense.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/KingdomDefense.dir/depend
 

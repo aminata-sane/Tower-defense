@@ -16,6 +16,10 @@ public:
     sf::Vector2i getEndPoint() const;
 
 private:
+    sf::Texture mapTexture;
+    sf::Sprite mapSprite;
+
+private:
     std::vector<std::vector<int>> grid;
     std::vector<sf::Vector2i> pathTiles;
     std::vector<sf::Vector2i> spawnPoints;

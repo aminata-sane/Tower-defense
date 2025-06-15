@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/c/Users/ndesc/OneDrive/Bureau/KingdomDefense/build/cmake_install.cmake"
+		"C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

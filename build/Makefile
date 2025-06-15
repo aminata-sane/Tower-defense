@@ -48,27 +48,27 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake.exe
+CMAKE_COMMAND = C:/msys64/ucrt64/bin/cmake.exe
 
 # The command to remove a file.
-RM = /usr/bin/cmake.exe -E rm -f
+RM = C:/msys64/ucrt64/bin/cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /c/Users/ndesc/OneDrive/Bureau/KingdomDefense
+CMAKE_SOURCE_DIR = C:/Users/ndesc/OneDrive/Bureau/KingdomDefense
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/build
+CMAKE_BINARY_DIR = C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake.exe -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
+	C:/msys64/ucrt64/bin/cmake.exe -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	C:/msys64/ucrt64/bin/cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/build/CMakeFiles /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/build/CMakeFiles C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /c/Users/ndesc/OneDrive/Bureau/KingdomDefense/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/ndesc/OneDrive/Bureau/KingdomDefense/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,13 +129,13 @@ KingdomDefense/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/KingdomDefense.dir/build.make CMakeFiles/KingdomDefense.dir/build
 .PHONY : KingdomDefense/fast
 
-src/enemy.o: src/enemy.cpp.o
-.PHONY : src/enemy.o
+src/enemy.obj: src/enemy.cpp.obj
+.PHONY : src/enemy.obj
 
 # target to build an object file
-src/enemy.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/KingdomDefense.dir/build.make CMakeFiles/KingdomDefense.dir/src/enemy.cpp.o
-.PHONY : src/enemy.cpp.o
+src/enemy.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/KingdomDefense.dir/build.make CMakeFiles/KingdomDefense.dir/src/enemy.cpp.obj
+.PHONY : src/enemy.cpp.obj
 
 src/enemy.i: src/enemy.cpp.i
 .PHONY : src/enemy.i
@@ -153,13 +153,13 @@ src/enemy.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/KingdomDefense.dir/build.make CMakeFiles/KingdomDefense.dir/src/enemy.cpp.s
 .PHONY : src/enemy.cpp.s
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+src/main.obj: src/main.cpp.obj
+.PHONY : src/main.obj
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/KingdomDefense.dir/build.make CMakeFiles/KingdomDefense.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+src/main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/KingdomDefense.dir/build.make CMakeFiles/KingdomDefense.dir/src/main.cpp.obj
+.PHONY : src/main.cpp.obj
 
 src/main.i: src/main.cpp.i
 .PHONY : src/main.i
@@ -177,13 +177,13 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/KingdomDefense.dir/build.make CMakeFiles/KingdomDefense.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/map.o: src/map.cpp.o
-.PHONY : src/map.o
+src/map.obj: src/map.cpp.obj
+.PHONY : src/map.obj
 
 # target to build an object file
-src/map.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/KingdomDefense.dir/build.make CMakeFiles/KingdomDefense.dir/src/map.cpp.o
-.PHONY : src/map.cpp.o
+src/map.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/KingdomDefense.dir/build.make CMakeFiles/KingdomDefense.dir/src/map.cpp.obj
+.PHONY : src/map.cpp.obj
 
 src/map.i: src/map.cpp.i
 .PHONY : src/map.i
@@ -201,13 +201,13 @@ src/map.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/KingdomDefense.dir/build.make CMakeFiles/KingdomDefense.dir/src/map.cpp.s
 .PHONY : src/map.cpp.s
 
-src/wave.o: src/wave.cpp.o
-.PHONY : src/wave.o
+src/wave.obj: src/wave.cpp.obj
+.PHONY : src/wave.obj
 
 # target to build an object file
-src/wave.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/KingdomDefense.dir/build.make CMakeFiles/KingdomDefense.dir/src/wave.cpp.o
-.PHONY : src/wave.cpp.o
+src/wave.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/KingdomDefense.dir/build.make CMakeFiles/KingdomDefense.dir/src/wave.cpp.obj
+.PHONY : src/wave.cpp.obj
 
 src/wave.i: src/wave.cpp.i
 .PHONY : src/wave.i
@@ -234,16 +234,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... KingdomDefense"
-	@echo "... src/enemy.o"
+	@echo "... src/enemy.obj"
 	@echo "... src/enemy.i"
 	@echo "... src/enemy.s"
-	@echo "... src/main.o"
+	@echo "... src/main.obj"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/map.o"
+	@echo "... src/map.obj"
 	@echo "... src/map.i"
 	@echo "... src/map.s"
-	@echo "... src/wave.o"
+	@echo "... src/wave.obj"
 	@echo "... src/wave.i"
 	@echo "... src/wave.s"
 .PHONY : help
