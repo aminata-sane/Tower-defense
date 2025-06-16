@@ -84,3 +84,8 @@ int Enemy::getHp() const
 {
     return hp;
 }
+
+int Enemy::getReward() const
+{
+    return 10;
+}

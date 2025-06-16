@@ -20,9 +20,12 @@ public:
     bool isAlive() const;
     int getHealth() const;
 
-        sf::Vector2f getPosition() const;
+    sf::Vector2f getPosition() const;
 
     int getHp() const;
+
+    int getReward() const;
+
     virtual int getMaxHp() const = 0;
 
 protected:
