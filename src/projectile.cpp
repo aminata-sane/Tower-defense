@@ -1,37 +1,21 @@
 #include "projectile.h"
 #include "enemy.h"
 #include <cmath>
-#include <random>
 
-// Helper to calculate distance
 static float getDistance(sf::Vector2f a, sf::Vector2f b)
 {
     return std::sqrt((a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y));
 }
 
-// Projectile constructor
-Projectile::Projectile(ProjectileType type,
-                       sf::Vector2f startPos,
-                       std::shared_ptr<Enemy> target,
-                       float damage)
+Projectile::Projectile(ProjectileType type, sf::Vector2f startPos, Enemy *target, float damage)
     : position(startPos), target(target), speed(200.f), damage(damage), type(type), active(true)
 {
-    // Load texture depending on projectile type
     switch (type)
     {
     case ProjectileType::SWORD:
-    {
         texture.loadFromFile("assets/images/tower/knights.gif");
-
-        // Randomly select between sword.wav and hit.wav
-        int soundChoice = rand() % 2;
-        if (soundChoice == 0)
-            hitBuffer.loadFromFile("assets/sounds/sword.wav");
-        else
-            hitBuffer.loadFromFile("assets/sounds/hit.wav");
-
+        hitBuffer.loadFromFile("assets/sounds/sword.wav");
         break;
-    }
     case ProjectileType::ARROW:
         texture.loadFromFile("assets/images/effect/arrow.gif");
         hitBuffer.loadFromFile("assets/sounds/arrows.wav");
@@ -49,7 +33,6 @@ Projectile::Projectile(ProjectileType type,
     sprite.setPosition(position);
 }
 
-// Update projectile each frame
 void Projectile::update(float deltaTime)
 {
     if (!target || !target->isAlive())
@@ -64,7 +47,7 @@ void Projectile::update(float deltaTime)
     if (distance < 5.f)
     {
         target->takeDamage(damage);
-        hitSound.play(); // Play hit sound
+        hitSound.play();
         active = false;
         return;
     }
@@ -74,26 +57,22 @@ void Projectile::update(float deltaTime)
     sprite.setPosition(position);
 }
 
-// Draw projectile
 void Projectile::draw(sf::RenderWindow &window)
 {
     if (active)
         window.draw(sprite);
 }
 
-// Check if projectile is active
 bool Projectile::isActive() const
 {
     return active;
 }
 
-// Get projectile type
 ProjectileType Projectile::getType() const
 {
     return type;
 }
 
-// Get projectile position (optional utility)
 sf::Vector2f Projectile::getPosition() const
 {
     return position;

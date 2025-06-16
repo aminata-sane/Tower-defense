@@ -1,12 +1,10 @@
 #include "tower.h"
 #include "enemy.h"
 #include "projectile.h"
-
 #include <cmath>
 #include <iostream>
 #include <random>
 
-// Constructor
 Tower::Tower(TowerType type, sf::Vector2f position)
     : type(type), position(position), target(nullptr), timeSinceLastShot(0.f), level(1)
 {
@@ -40,50 +38,21 @@ Tower::Tower(TowerType type, sf::Vector2f position)
 
     shootSound.setBuffer(soundBuffer);
 
-    // Load upgrade sound
-    if (!upgradeBuffer.loadFromFile("assets/sounds/upgrade.wav"))
-        std::cerr << "Failed to load upgrade.wav\n";
+    upgradeBuffer.loadFromFile("assets/sounds/upgrade.wav");
     upgradeSound.setBuffer(upgradeBuffer);
 
-    // Load sprite
-    updateTexture(); // Load texture based on type and level
-
+    updateTexture();
     sprite.setTexture(texture);
     sprite.setPosition(position);
     sprite.setOrigin(texture.getSize().x / 2, texture.getSize().y / 2);
 }
 
-// Get tower type
-TowerType Tower::getType() const
-{
-    return type;
-}
+TowerType Tower::getType() const { return type; }
+int Tower::getCost() const { return cost; }
+int Tower::getUpgradeCost() const { return upgradeCost; }
+int Tower::getLevel() const { return level; }
+sf::Vector2f Tower::getPosition() const { return position; }
 
-// Get tower cost
-int Tower::getCost() const
-{
-    return cost;
-}
-
-// Get tower upgrade cost
-int Tower::getUpgradeCost() const
-{
-    return upgradeCost;
-}
-
-// Get tower level
-int Tower::getLevel() const
-{
-    return level;
-}
-
-// Get tower position
-sf::Vector2f Tower::getPosition() const
-{
-    return position;
-}
-
-// Upgrade tower
 bool Tower::upgrade(int &playerGold)
 {
     if (playerGold >= upgradeCost)
@@ -91,33 +60,29 @@ bool Tower::upgrade(int &playerGold)
         playerGold -= upgradeCost;
         level++;
         range *= 1.1f;
-        fireRate *= 0.9f; // faster firing
+        fireRate *= 0.9f;
         damage += 10;
         upgradeCost += 25;
-
-        updateTexture();     // Refresh sprite
-        upgradeSound.play(); // Play upgrade sound
+        updateTexture();
+        upgradeSound.play();
         return true;
     }
     return false;
 }
 
-// Check if enemy is in range
-bool Tower::isInRange(std::shared_ptr<Enemy> enemy) const
+bool Tower::isInRange(Enemy *enemy) const
 {
     float dx = enemy->getPosition().x - position.x;
     float dy = enemy->getPosition().y - position.y;
-    float distance = std::sqrt(dx * dx + dy * dy);
-    return distance <= range;
+    return std::sqrt(dx * dx + dy * dy) <= range;
 }
 
-// Acquire target (nearest enemy within range)
-std::shared_ptr<Enemy> Tower::acquireTarget(const std::vector<std::shared_ptr<Enemy>> &enemies)
+Enemy *Tower::acquireTarget(const std::vector<Enemy *> &enemies)
 {
     float closestDistance = range;
-    std::shared_ptr<Enemy> closest = nullptr;
+    Enemy *closest = nullptr;
 
-    for (auto &enemy : enemies)
+    for (Enemy *enemy : enemies)
     {
         float dx = enemy->getPosition().x - position.x;
         float dy = enemy->getPosition().y - position.y;
@@ -132,39 +97,28 @@ std::shared_ptr<Enemy> Tower::acquireTarget(const std::vector<std::shared_ptr<En
     return closest;
 }
 
-// Update tower logic (cooldown, targeting, shooting)
-void Tower::update(float deltaTime,
-                   std::vector<std::shared_ptr<Enemy>> &enemies,
-                   std::vector<std::shared_ptr<Projectile>> &projectiles,
-                   int &playerGold)
+void Tower::update(float deltaTime, std::vector<Enemy *> &enemies, std::vector<std::shared_ptr<Projectile>> &projectiles, int &playerGold)
 {
     timeSinceLastShot += deltaTime;
-
-    // Acquire new target if needed
     if (!target || !target->isAlive() || !isInRange(target))
     {
         target = acquireTarget(enemies);
     }
-
-    // Shoot if possible
     if (target && timeSinceLastShot >= fireRate)
     {
         auto newProjectile = shoot();
         if (newProjectile)
             projectiles.push_back(newProjectile);
-
         timeSinceLastShot = 0.f;
     }
 }
 
-// Shoot a projectile
 std::shared_ptr<Projectile> Tower::shoot()
 {
     if (!target)
         return nullptr;
 
     ProjectileType projectileType;
-
     switch (type)
     {
     case TowerType::MELEE:
@@ -177,19 +131,15 @@ std::shared_ptr<Projectile> Tower::shoot()
         projectileType = ProjectileType::FIREBALL;
         break;
     }
-
     shootSound.play();
-
     return std::make_shared<Projectile>(projectileType, position, target, damage);
 }
 
-// Draw the tower
 void Tower::draw(sf::RenderWindow &window)
 {
     window.draw(sprite);
 }
 
-// Update tower sprite based on type and level
 void Tower::updateTexture()
 {
     std::string basePath = "assets/images/tower/";
@@ -198,21 +148,17 @@ void Tower::updateTexture()
     switch (type)
     {
     case TowerType::MELEE:
-        // Files: tower1-1.jpg, tower1-2.jpg, tower1-3.jpg
         filename = "tower1-" + std::to_string(level) + ".jpg";
         break;
     case TowerType::ARROW:
-        // Files: archer-tower1-1.jpg, archer-tower1-2.jpg, archer-tower1-3.jpg
         filename = "archer-tower1-" + std::to_string(level) + ".jpg";
         break;
     case TowerType::FIRE:
-        // Files: fire-tower1-1.jpg, fire-tower1-2.jpg, fire-tower1-3.jpg
         filename = "fire-tower1-" + std::to_string(level) + ".jpg";
         break;
     }
 
     std::string fullPath = basePath + filename;
-
     if (texture.loadFromFile(fullPath))
     {
         sprite.setTexture(texture);
