@@ -1,0 +1,21 @@
+// filepath: /Users/mameaminataconstancesane/Desktop/Tower-defense/.vscode/c_cpp_properties.json
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/homebrew/include" // AJOUTE CETTE LIGNE pour SFML
+            ],
+            "defines": [],
+            "macFrameworkPath": [
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "compilerPath": "/usr/bin/clang", // Ou le chemin vers ton compilateur g++/clang++
+            "cStandard": "c17",
+            "cppStandard": "c++17", // Assure-toi que cela correspond à ton projet (c++14, c++17, c++20)
+            "intelliSenseMode": "macos-clang-arm64" // Ou macos-clang-x64 selon ton Mac
+        }
+    ],
+    "version": 4
+}
